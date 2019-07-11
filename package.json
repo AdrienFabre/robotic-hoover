@@ -1,0 +1,21 @@
+{
+  "name": "robotic-hoover",
+  "version": "1.0.0",
+  "description": "",
+  "main": "navigation.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Adrien Fabre",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-jest": "^24.8.0",
+    "jest": "^24.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdrienFabre/robotic-hoover.git"
+  }
+}
