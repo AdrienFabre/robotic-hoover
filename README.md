@@ -51,4 +51,16 @@ I want to know its final location.
 As a user,
 So I can know if I need to empty my hoover,
 I want to know how many dirt has been cleaned up.
+
+As a user,
+So I read all info about the hoover journey in one place,
+I want to be able to read a full report in the terminal.
+```
+
+## Edge cases
+
+```md
+The hoover can not go outside of the room.
+Driving into a wall has no effects.
+A patch of dirt can not be taken more than once.
 ```

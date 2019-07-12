@@ -24,30 +24,16 @@ class Navigator {
   }
 
   updatePosition(position, direction) {
-    switch (direction) {
-      case "N":
-        position.Y += 1;
-        break;
-      case "S":
-        position.Y -= 1;
-        break;
-      case "E":
-        position.X += 1;
-        break;
-      case "W":
-        position.X -= 1;
-        break;
+    if (direction === "N" && position.Y < this.roomSize.Y) {
+      position.Y += 1;
+    } else if (direction === "S" && position.Y > 0) {
+      position.Y -= 1;
+    } else if (direction === "E" && position.X < this.roomSize.X) {
+      position.X += 1;
+    } else if (direction === "W" && position.X > 0) {
+      position.X -= 1;
     }
     this.positions.push(`${position.X} ${position.Y}`);
-    this.respectRoomSize(position.X, position.Y);
-  }
-
-  respectRoomSize(X, Y) {
-    if (X > this.roomSize.X || X < 0 || Y > this.roomSize.Y || X < 0) {
-      throw new Error(
-        "The directions lead into the wall! Please change directions."
-      );
-    }
   }
 
   finalPosition() {
@@ -65,9 +51,7 @@ class Navigator {
   }
 
   report() {
-    let finalPosition = this.finalPosition();
-    let cleanedDirt = this.cleanedDirt();
-    console.log(`${finalPosition}\n${cleanedDirt}`);
+    console.log(`${this.finalPosition()}\n${this.cleanedDirt()}`);
   }
 }
 
