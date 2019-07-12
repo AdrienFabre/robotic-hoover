@@ -8,6 +8,10 @@ class Navigator {
       X: parseInt(this.content[1][0]),
       Y: parseInt(this.content[1][2])
     };
+    this.roomSize = {
+      X: parseInt(this.content[0][0]),
+      Y: parseInt(this.content[0][2])
+    };
     this.dirtPositions = this.content.splice(2, this.content.length - 3);
     this.positions = [];
   }
@@ -35,6 +39,15 @@ class Navigator {
         break;
     }
     this.positions.push(`${position.X} ${position.Y}`);
+    this.respectRoomSize(position.X, position.Y);
+  }
+
+  respectRoomSize(X, Y) {
+    if (X > this.roomSize.X || X < 0 || Y > this.roomSize.Y || X < 0) {
+      throw new Error(
+        "The directions lead into the wall! Please change directions."
+      );
+    }
   }
 
   finalPosition() {
@@ -49,6 +62,12 @@ class Navigator {
       }
     }
     return dirtCount.toString();
+  }
+
+  report() {
+    let finalPosition = this.finalPosition();
+    let cleanedDirt = this.cleanedDirt();
+    console.log(`${finalPosition}\n${cleanedDirt}`);
   }
 }
 
