@@ -7,6 +7,37 @@ This programme navigates an imaginary robotic hoover through an imaginary room. 
 - Node.js
 - Jest
 
+## Installation
+
+```md
+npm install
+```
+
+## Usage
+
+Runs in command line:
+
+```md
+npx run src/navigatorInterface.js
+What is the path of your input file?
+(file format details in the README)
+inputFiles/input.txt
+```
+
+```md
+Here is your report:
+1 3
+1
+```
+
+## Testing
+
+```md
+npm test
+```
+
+````
+
 ## Input
 
 The programme takes a `.txt` file as an input.
@@ -64,3 +95,4 @@ The hoover can not go outside of the room.
 Driving into a wall has no effects.
 A patch of dirt can not be taken more than once.
 ```
+````

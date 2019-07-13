@@ -3,16 +3,20 @@ let fs = require("fs");
 class Navigator {
   constructor(inputFile) {
     this.content = fs.readFileSync(inputFile, "utf8").split("\n");
-    this.directions = this.content[this.content.length - 1].split("");
-    this.initialPosition = {
-      X: parseInt(this.content[1][0]),
-      Y: parseInt(this.content[1][2])
-    };
+
     this.roomSize = {
       X: parseInt(this.content[0][0]),
       Y: parseInt(this.content[0][2])
     };
+
+    this.initialPosition = {
+      X: parseInt(this.content[1][0]),
+      Y: parseInt(this.content[1][2])
+    };
     this.dirtPositions = this.content.splice(2, this.content.length - 3);
+
+    this.directions = this.content[this.content.length - 1].split("");
+
     this.positions = [];
   }
 
@@ -21,6 +25,7 @@ class Navigator {
     for (let i = 0; i < this.directions.length; i++) {
       this.updatePosition(position, this.directions[i]);
     }
+    return this;
   }
 
   updatePosition(position, direction) {
@@ -50,9 +55,9 @@ class Navigator {
     return dirtCount.toString();
   }
 
-  report() {
+  outputReport() {
     console.log(`${this.finalPosition()}\n${this.cleanedDirt()}`);
   }
 }
 
-export default Navigator;
+module.exports = Navigator;
