@@ -25,7 +25,6 @@ inputFiles/input.txt
 ```
 
 ```md
-Here is your report:
 1 3
 1
 ```
@@ -35,8 +34,6 @@ Here is your report:
 ```md
 npm test
 ```
-
-````
 
 ## Input
 
@@ -95,4 +92,7 @@ The hoover can not go outside of the room.
 Driving into a wall has no effects.
 A patch of dirt can not be taken more than once.
 ```
-````
+
+```
+
+```

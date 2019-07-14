@@ -27,22 +27,22 @@ describe("Navigator", () => {
     });
   });
   describe("with directions outside the room", () => {
-    it("Can drive into a South wall and stay on track", () => {
+    it("Can drive into the North wall and stay on track", () => {
       navigator = new Navigator("./tests/inputFiles/inputExtraDirectionsN.txt");
       navigator.executeDrivingInstructions();
       expect(navigator.finalPosition()).toBe("1 5");
     });
-    it("Can drive into a South wall and stay on track", () => {
+    it("Can drive into the South wall and stay on track", () => {
       navigator = new Navigator("./tests/inputFiles/inputExtraDirectionsS.txt");
       navigator.executeDrivingInstructions();
       expect(navigator.finalPosition()).toBe("1 0");
     });
-    it("Can drive into a South wall and stay on track", () => {
+    it("Can drive into the East wall and stay on track", () => {
       navigator = new Navigator("./tests/inputFiles/inputExtraDirectionsE.txt");
       navigator.executeDrivingInstructions();
       expect(navigator.finalPosition()).toBe("5 3");
     });
-    it("Can drive into a West wall and stay on track", () => {
+    it("Can drive into the West wall and stay on track", () => {
       navigator = new Navigator("./tests/inputFiles/inputExtraDirectionsW.txt");
       navigator.executeDrivingInstructions();
       expect(navigator.finalPosition()).toBe("0 3");

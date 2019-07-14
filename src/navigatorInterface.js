@@ -10,7 +10,6 @@ readline.question(
 (file format details in the README)
 `,
   path => {
-    console.log("Here is your report:");
     let navigator = new Navigator(path);
     navigator.executeDrivingInstructions().outputReport();
     readline.close();
