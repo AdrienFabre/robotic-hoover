@@ -13,22 +13,6 @@ This programme navigates an imaginary robotic hoover through an imaginary room. 
 npm install
 ```
 
-## Usage
-
-Runs in command line:
-
-```md
-npx run src/navigatorInterface.js
-What is the path of your input file?
-(file format details in the README)
-inputFiles/input.txt
-```
-
-```md
-1 3
-1
-```
-
 ## Testing
 
 ```md
@@ -68,6 +52,36 @@ The programme returns a standard output (STDOUT) in the terminal.
 
 - The first line of your program output should display the X and Y coordinatesmarking the position of the hoover after processing all commands.
 - The second line of the program output should display the number of patches of dirt the robot cleaned up.
+
+## Usage
+
+Example, to run in command line:
+
+- In
+
+```md
+npx run src/navigatorInterface.js
+```
+
+- Out
+
+```md
+What is the path of your input file?
+(file format details in the README)
+```
+
+- In
+
+```md
+inputFiles/input.txt
+```
+
+- Out
+
+```md
+1 3
+1
+```
 
 ## User stories
 
