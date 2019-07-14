@@ -92,7 +92,3 @@ The hoover can not go outside of the room.
 Driving into a wall has no effects.
 A patch of dirt can not be taken more than once.
 ```
-
-```
-
-```
